@@ -44,10 +44,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 //nav 
 const navData = siteContent.nav;
 console.log(navData);
-const navDom  = document.querySelector("nav");
+const navDom  = document.querySelectorAll("nav a");
 console.log(navDom);
 
-
+navDom.forEach((element, index) => {
+element.textContent = Object.values(navData)[index];
+});
 //cta
 const cta = siteContent.cta;
 
@@ -93,6 +95,12 @@ console.log(contactDom);
 const contactH4 = document.querySelector(".contact h4");
 console.log(contactH4);
 contactH4.textContent = contactDom["contact-h4"];
+
+const contactP = document.querySelectorAll(".contact p");
+console.log(contactP);
+contactP[0].textContent = contactDom.address;
+contactP[1].textContent = contactDom.phone;
+contactP[2].textContent = contactDom.email;
 
 //footer
 const footerDom = document.querySelector("footer p");
