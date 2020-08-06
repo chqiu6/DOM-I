@@ -50,6 +50,24 @@ console.log(navDom);
 navDom.forEach((element, index) => {
 element.textContent = Object.values(navData)[index];
 });
+
+//nav style
+navDom.forEach((element) =>{
+element.style.color = "green";
+});
+
+//createElement prepend n append
+const preA =  document.createElement("a");
+preA.href = "#";
+preA.textContent = "Prepend Nav";
+
+const appendA = document.createElement("a");
+appendA.href = "#";
+appendA.textContent = "Append Nav";
+
+document.querySelector("nav").prepend(preA);
+document.querySelector("nav").append(appendA);
+
 //cta
 const cta = siteContent.cta;
 
@@ -106,3 +124,4 @@ contactP[2].textContent = contactDom.email;
 const footerDom = document.querySelector("footer p");
 console.log(footerDom);
 footerDom.textContent = siteContent.footer.copyright;
+
