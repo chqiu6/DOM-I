@@ -39,4 +39,62 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//nav 
+const navData = siteContent.nav;
+console.log(navData);
+const navDom  = document.querySelector("nav");
+console.log(navDom);
+
+
+//cta
+const cta = siteContent.cta;
+
+const ctaH1 = document.querySelector(".cta h1");
+console.log(ctaH1);
+ctaH1.textContent = cta.h1;
+
+const ctaButton = document.querySelector(".cta button");
+console.log(ctaButton);
+ctaButton.textContent = cta.button;
+
+const ctaImg = document.getElementById("cta-img");
+// ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+ctaImg.src = siteContent.cta["img-src"];
+
+//main-content top
+const main = siteContent["main-content"];
+console.log(main);
+const mainH4 = document.querySelectorAll(".main-content h4");
+console.log(mainH4);
+mainH4[0].textContent = main["features-h4"];
+mainH4[1].textContent = main["about-h4"];
+const mainP = document.querySelectorAll(".main-content p");
+console.log(mainP);
+mainP[0].textContent = main["features-content"];
+mainP[1].textContent = main["about-content"];
+
+//main-content bottom
+mainH4[2].textContent = main["services-h4"];
+mainH4[3].textContent = main["product-h4"];
+mainH4[4].textContent = main["vision-h4"];
+mainP[2].textContent = main["services-content"];
+mainP[3].textContent = main["product-content"];
+mainP[4].textContent = main["vision-content"];
+
+const mainImg = document.querySelector(".middle-img");
+// console.log(mainImg);
+mainImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//contact
+const contactDom = siteContent.contact;
+console.log(contactDom);
+const contactH4 = document.querySelector(".contact h4");
+console.log(contactH4);
+contactH4.textContent = contactDom["contact-h4"];
+
+//footer
+const footerDom = document.querySelector("footer p");
+console.log(footerDom);
+footerDom.textContent = siteContent.footer.copyright;
