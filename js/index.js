@@ -125,3 +125,4 @@ const footerDom = document.querySelector("footer p");
 console.log(footerDom);
 footerDom.textContent = siteContent.footer.copyright;
 
+//mvp
